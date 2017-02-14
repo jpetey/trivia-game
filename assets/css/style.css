@@ -1,0 +1,30 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+	text-align: center;
+}
+
+
+#start-btn {
+	padding: 15px;
+	border: 1px solid #000;
+	width: 200px;
+	text-align: center;
+	cursor: pointer;
+}
