@@ -20,11 +20,11 @@ h3 {
 	text-align: center;
 }
 
-
 #start-btn {
 	padding: 15px;
 	border: 1px solid #000;
 	width: 200px;
+	margin: 0 auto;
 	text-align: center;
 	cursor: pointer;
 }
