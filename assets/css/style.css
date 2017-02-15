@@ -2,6 +2,8 @@ body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 15px;
   line-height: 30px;
+  background-color: #4aaaa5;
+  color: #fff;
 }
 
 * {
@@ -20,11 +22,27 @@ h3 {
 	text-align: center;
 }
 
-#start-btn {
+#start-btn, .choices {
 	padding: 15px;
-	border: 1px solid #000;
+	margin: 15px auto;
+	border: 1px solid #fff;
 	width: 200px;
-	margin: 0 auto;
 	text-align: center;
 	cursor: pointer;
+}
+
+#start-btn:hover, .choices:hover {
+	opacity: 0.5;
+}
+
+#game-section-1 {
+	padding: 15px 0;
+	font-weight: bold;
+	color: #000;
+}
+
+#game-section-2 {
+	margin: 15px 0 30px 0;
+	line-height: 24px;
+	color: #333333;
 }

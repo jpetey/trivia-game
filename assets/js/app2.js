@@ -2,7 +2,7 @@
 
 var trivia = [
 	{
-	question: "Who was the first President of Zimbabwe?",
+	question: "Who was the first <br>President of Zimbabwe?",
 	options: ["President Banana", "President Camacho", "President Ka-blam-o", "President Burrito"],
 	correctAnswer: 0,
 	},
@@ -12,7 +12,7 @@ var trivia = [
 	correctAnswer: 3,
 	},
 	{
-	question: "Before Nirvana was 'Nirvana', they went by several other band names. Which band name is NOT one of those precursory names?",
+	question: "Before Nirvana was 'Nirvana', they went by several other band names.<br>Which band name is NOT one of those precursory names?",
 	options: ["Dead Freds", "Skid Row", "Bliss", "Fecal Matter"],
 	correctAnswer: 0,
 	},
@@ -37,18 +37,18 @@ var unansweredCount = 0;
 
 var seconds = 5;
 var roundTimer;
-var userChoice;
 
 // PLAY THE GAME!
 
 function displayStart() {
 	$("#start-btn").html("START");
+	$("#replay-btn").empty();
 }
 
 //... Countdown Timer...
 function tickDown () {
 
-	// console.log("Start timer at:" + seconds);
+	console.log("Start timer at:" + seconds);
 	seconds--;
 	
 	if (seconds > 9) {
@@ -78,78 +78,37 @@ function startTrivia () {
 	incorrectCount = 0;
 	unansweredCount = 0;
 	round = 0;
-	$("#start-btn").hide();
-	$("#game-section-1").html("Timer: 00:30");
+	$("#replay-btn").empty();
+	$("#game-section-1").html("Timer: 00:11");
 	$("#game-section-2").html(trivia[round].question);
-	$("#game-section-3").empty();
-	for (var i = 0; i < 4; i++) {	
-        var choiceDiv = $("<div>");  
-      // Add class='choices' for styling
-        choiceDiv.addClass("choices");
-      // Give each <div> a data-attribute for ID'ing
-        choiceDiv.attr("data-option", i);
-      // Populate each <div> with text
-        choiceDiv.text(trivia[round].options[i]);
-      // Append text to "game-section-3" <div>
-        $("#game-section-3").append(choiceDiv);
-    }
+
+	$("#choice-1").html(trivia[round].options[0]);
+	$("#choice-2").html(trivia[round].options[1]);
+	$("#choice-3").html(trivia[round].options[2]);
+	$("#choice-4").html(trivia[round].options[3]);
+    
 
 	roundTimer = setInterval(tickDown,1000);
 
 };
 
 function nextRound () {
-	// console.log("Round # just before increase: " + round);
+	console.log("Round # just before increase: " + round);
 	round++;
-	// console.log("Round # just after increase: " + round);
+	console.log("Round # just after increase: " + round);
 
 	if (round < trivia.length) {
 		seconds = 5;
 		$("#game-section-1").html("Timer: 00:30");
 		$("#game-section-2").html(trivia[round].question);
-		$("#game-section-3").empty();
+
 		// Create <div> containers for each of the 4 choices
-		for (var i = 0; i < 4; i++) {
-	        var choiceDiv = $("<div>");  
-	      // Add class='choices' for styling
-	        choiceDiv.addClass("choices");
-	      // Give each <div> a data-attribute for ID'ing
-	        choiceDiv.attr("data-option", i);
+		$("#choice-1").html(trivia[round].options[0]);
+		$("#choice-2").html(trivia[round].options[1]);
+		$("#choice-3").html(trivia[round].options[2]);
+		$("#choice-4").html(trivia[round].options[3]);
 
-	      // Populate each <div> with text
-	        choiceDiv.text(trivia[round].options[i]);
-	      // Append text to "game-section-3" <div>
-	        $("#game-section-3").append(choiceDiv);	
-	    }
-
-	    roundTimer = setInterval(tickDown,1000);
-
-	    $(".choices").on("click", function() {
-			console.log(parseInt($(this).data("option")));
-			userChoice = parseInt($(this).data("option"));
-
-			if (userChoice === trivia[round].correctAnswer) {
-				correctCount++;
-				clearInterval(roundTimer);
-				$("#game-section-2").html("Correct!");
-				$("#game-section-3").html("The correct answer is: " 
-				+ trivia[round].options[trivia[round].correctAnswer] +
-				"<br>(IMG PLACEHOLDER)");
-
-				setTimeout(nextRound,5000);
-
-			} else if (userChoice !== trivia[round].correctAnswer) {   
-				incorrectCount++;
-				clearInterval(roundTimer);
-				$("#game-section-2").html("Incorrect!");
-				$("#game-section-3").html("The correct answer is: " 
-				+ trivia[round].options[trivia[round].correctAnswer] +
-				"<br>(IMG PLACEHOLDER)");
-
-			setTimeout(nextRound,5000);		
-			}
-
-		}); 	
+		roundTimer = setInterval(tickDown,1000);
 
 	} else if (round >= trivia.length) {
 
@@ -157,12 +116,8 @@ function nextRound () {
 		$("#game-section-3").html("<p>Correct Answers: " + correctCount + "</p>"
 			+ "<p>Incorrect Answers: " + incorrectCount + "</p>"
 			+ "<p>Unanswered: " + unansweredCount + "</p>");
-		$("#start-btn").show()
-		$("#start-btn").html("Play Again!");
+		$("#replay-btn").html("Play Again!");
 	}
-
-
-
 };
 
 
@@ -218,3 +173,8 @@ displayStart();
 $("#start-btn").click(startTrivia);
 
 // Record Click on Answer Choice
+
+
+// Replay game
+$("#replay-btn").click(startTrivia);
+
