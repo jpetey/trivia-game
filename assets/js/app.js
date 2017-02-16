@@ -39,7 +39,7 @@ var trivia = [
 	media: "assets/images/wrigley.jpg",
 	},
 	{
-	question: "What popular American food brand accidentally translated their popular slogan to 'eat your fingers off' when first opening for business in China?",
+	question: "What popular American food brand accidentally translated their popular slogan into 'eat your fingers off' when first starting business in China?",
 	options: ["Campbell's Soup", "Lay's Potato Chips", "Kentucky Fried Chicken", "Applebee's"],
 	correctAnswer: 2,
 	media: "assets/images/kfc.gif",
