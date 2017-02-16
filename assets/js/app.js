@@ -27,7 +27,7 @@ var trivia = [
 	},
 	{
 	question: "Which country boasts the oldest, continually used national flag (which is still in use today)?",
-	options: ["Russia", "Turkey", "Brazil", "Denmark"],
+	options: ["Russia", "Turkey", "Cambodia", "Denmark"],
 	correctAnswer: 3,
 	media: "assets/images/denmark.gif",
 	funFact: "The current design of a white Scandinavian cross on a red back ground was adopted in 1625 and its square shape in 1748."
@@ -220,7 +220,7 @@ function nextRound () {
 			+ "<p>Incorrect Answers: " + incorrectCount + "</p>"
 			+ "<p>Unanswered: " + unansweredCount + "</p>");
 		$("#start-btn").show()
-		$("#start-btn").html("Play Again!");
+		$("#start-btn").html("<div>Click the door to play again!</div> <img src='assets/images/door.jpg'>");
 	}
 
 

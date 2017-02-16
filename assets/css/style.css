@@ -44,6 +44,8 @@ h2 {
 #start-btn {
 	text-align: center;
 	cursor: pointer;
+	font-size: 35px;
+	line-height: 48px;
 }
 
 #start-btn:hover, .choices:hover {
