@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'TwyliteZone';
+  src: url('TWYLZW__.TTF.eot');
+  src: url('TWYLZW__.TTF.eot?#iefix') format('embedded-opentype');
+  src: url('TwyliteZoneBook.woff') format('woff'),
+       url('TWYLZW__.TTF') format('truetype'),
+       url('TwyliteZoneBook.svg#TwyliteZoneBook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

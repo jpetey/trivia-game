@@ -1,48 +1,85 @@
 body {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 15px;
+  font-family: 'Georgia', Helvetica, sans-serif;
+  font-size: 22px;
   line-height: 30px;
-  background-color: #4aaaa5;
-  color: #fff;
+  background-image: url('../images/stars.jpg');
+  color: #ffff66;
 }
 
 * {
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: bold;
+h1 {
+  font-family: 'TwyliteZone', 'Helvetica Neue', Helvetica, sans-serif;
   text-align: center;
+  font-size: 70px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 15px #000;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'TwyliteZone', 'Helvetica Neue', Helvetica, sans-serif;
+  text-align: center;
+  font-weight: normal;
+  text-shadow: 2px 2px 5px #000;
+  font-size: 22px;
 }
 
 .container {
 	text-align: center;
+	max-width: 920px;
+	margin: 0 auto;
+}
+#welcome {
+	background-color: #002266;
+	padding: 1px;
+	color: #ffff66;
+	border-radius: 5px;
+	border: 5px double #000;
 }
 
-#start-btn, .choices {
-	padding: 15px;
-	margin: 15px auto;
-	border: 1px solid #fff;
-	width: 200px;
+#start-btn {
 	text-align: center;
 	cursor: pointer;
 }
 
 #start-btn:hover, .choices:hover {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 #game-section-1 {
 	padding: 15px 0;
 	font-weight: bold;
-	color: #000;
+	color: #ff3333;
+	text-shadow: 1px 1px 5px #000;
 }
 
 #game-section-2 {
 	margin: 15px 0 30px 0;
-	line-height: 24px;
-	color: #333333;
+	line-height: 35px;
+	background-color: #000;
+	color: #6699ff;
+	font-size: 25px;
+	font-weight: bold;
 }
+
+.choices {
+	padding: 15px;
+	margin: 15px auto;
+	border: 5px double #000;
+	background-color: #002266;
+	color: #fff;
+	width: 400px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#game-section-3 {
+	text-shadow: 0px 0px 5px #000;
+	font-weight: bold;
+	color: #ff8080;
+}
+
